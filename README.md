@@ -1,16 +1,15 @@
-# mindfulness_reminder
+# Mindfulness Reminder
 
-A new Flutter project.
+Eine minimalistische Android-App für Achtsamkeitserinnerungen.
 
-## Getting Started
+## Features
+- Periodische Benachrichtigungen mit wechselnden Mindfulness-Prompts
+- Täglich wechselnde Achtsamkeitstexte
+- Minimalistisches Design
+- Open Source, keine Tracker
 
-This project is a starting point for a Flutter application.
+## Installation
+Verfügbar über F-Droid (in Kürze) und Google Play Store (Testphase).
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Lizenz
+MIT
