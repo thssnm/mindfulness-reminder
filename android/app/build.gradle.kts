@@ -20,6 +20,11 @@ android {
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"  // HIER: Von 26.x auf 27.x ändern
 
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
 
