@@ -1,0 +1,12 @@
+Eine minimalistische App für mehr Achtsamkeit im Alltag.
+
+<b>Features:</b>
+- Periodische Erinnerungen mit wechselnden Achtsamkeits-Prompts
+- Täglich neue inspirierende Texte
+- Minimalistisches, ruhiges Design
+- Vollständig Open Source
+- Keine Tracker, keine Analytics
+
+Die App sendet in regelmäßigen Abständen eine einfache Frage: "Wo bist du gerade?" - eine Einladung, kurz innezuhalten und im Moment anzukommen.
+
+Benachrichtigungen erfolgen nur während der Wachzeiten (8-22 Uhr) und können jederzeit aktiviert oder deaktiviert werden.

@@ -1,0 +1,12 @@
+A minimalistic app for more mindfulness in everyday life.
+
+<b>Features:</b>
+- Periodic reminders with varying mindfulness prompts
+- Daily rotating inspirational texts
+- Minimalistic, calm design
+- Fully open source
+- No trackers, no analytics
+
+The app sends a simple question at regular intervals: "Where are you right now?" - an invitation to pause briefly and be present in the moment.
+
+Notifications only occur during waking hours (8am-10pm) and can be activated or deactivated at any time.
