@@ -52,7 +52,7 @@ defaultConfig {
 
     minSdk = 23
     targetSdk = 35  // Android 14
-    versionCode = 15
+    versionCode = 1
     versionName = "1.0.0"
 }    
 
