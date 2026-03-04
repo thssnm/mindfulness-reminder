@@ -53,7 +53,7 @@ defaultConfig {
     minSdk = 23
     targetSdk = 35  // Android 14
     versionCode = 15
-    versionName = "1.1.5"
+    versionName = "1.0.0"
 }    
 
     buildTypes {
