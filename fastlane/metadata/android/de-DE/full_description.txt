@@ -1,6 +1,7 @@
 Eine minimalistische App für mehr Achtsamkeit im Alltag.
 
 <b>Features:</b>
+
 - Periodische Erinnerungen mit wechselnden Achtsamkeits-Prompts
 - Täglich neue inspirierende Texte
 - Minimalistisches, ruhiges Design
