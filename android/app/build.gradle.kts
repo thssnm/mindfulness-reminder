@@ -5,20 +5,20 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-// HIER EINFÜGEN - VOR dem android {} Block!
 import java.util.Properties
 import java.io.FileInputStream
 
 val keystorePropertiesFile = rootProject.file("key.properties")
 val keystoreProperties = Properties()
-if (keystorePropertiesFile.exists()) {
+val useKeystoreSigning = keystorePropertiesFile.exists()
+if (useKeystoreSigning) {
     keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
 
 android {
     namespace = "com.theissenmatthias.mindfulness_reminder"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973"  // HIER: Von 26.x auf 27.x ändern
+    ndkVersion = "27.0.12077973"  
 
     dependenciesInfo {
         includeInApk = false
@@ -37,15 +37,16 @@ android {
     }
 
     signingConfigs {
-        create("release") {
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
-            storeFile = keystoreProperties["storeFile"]?.let { file(it as String) }
-            storePassword = keystoreProperties["storePassword"] as String
+        if (useKeystoreSigning) {
+            create("release") {
+                keyAlias = keystoreProperties["keyAlias"] as String
+                keyPassword = keystoreProperties["keyPassword"] as String
+                storeFile = keystoreProperties["storeFile"]?.let { file(it as String) }
+                storePassword = keystoreProperties["storePassword"] as String
+            }
         }
     }
 
-        // WICHTIG: Hier auch anpassen auf deine namespace!
 defaultConfig {
     applicationId = "com.theissenmatthias.mindfulness_reminder"
     multiDexEnabled = true
@@ -58,12 +59,14 @@ defaultConfig {
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.getByName("release")
+            if (useKeystoreSigning) {
+                signingConfig = signingConfigs.getByName("release")
+            }
 
-            isMinifyEnabled = false      // Ausschalten!
-            isShrinkResources = false    // Ausschalten!
+            isMinifyEnabled = false     
+            isShrinkResources = false    
             ndk {
-                debugSymbolLevel = "FULL"  // oder "SYMBOL_TABLE"
+                debugSymbolLevel = "FULL"  
             }
 
         }
