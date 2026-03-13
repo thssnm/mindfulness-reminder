@@ -51,7 +51,7 @@ defaultConfig {
     applicationId = "com.theissenmatthias.mindfulness_reminder"
     multiDexEnabled = true
 
-    minSdk = 23
+    minSdk = flutter.minSdkVersion
     targetSdk = 35  // Android 14
     versionCode = 3
     versionName = "1.0.2"
