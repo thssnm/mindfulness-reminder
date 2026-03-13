@@ -1,6 +1,7 @@
 A minimalistic app for more mindfulness in everyday life.
 
 <b>Features:</b>
+
 - Periodic reminders with varying mindfulness prompts
 - Daily rotating inspirational texts
 - Minimalistic, calm design
