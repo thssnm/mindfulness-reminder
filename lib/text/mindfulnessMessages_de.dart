@@ -1,4 +1,4 @@
-final List<String> mindfulnessMessages = [
+final List<String> mindfulnessMessagesDe = [
   "Atme einmal bewusst ein und aus.",
   "Nimm dir einen Moment für dich.",
   "Wie fühlst du dich gerade wirklich?",
