@@ -53,8 +53,8 @@ defaultConfig {
 
     minSdk = flutter.minSdkVersion
     targetSdk = 35  // Android 14
-    versionCode = 3
-    versionName = "1.0.2"
+    versionCode = 4
+    versionName = "1.1.0"
 }    
 
     buildTypes {
@@ -63,8 +63,8 @@ defaultConfig {
                 signingConfig = signingConfigs.getByName("release")
             }
 
-            isMinifyEnabled = false     
-            isShrinkResources = false    
+            isMinifyEnabled = true     
+            isShrinkResources = true    
             ndk {
                 debugSymbolLevel = "FULL"  
             }
