@@ -53,8 +53,8 @@ defaultConfig {
 
     minSdk = flutter.minSdkVersion
     targetSdk = 35  // Android 14
-    versionCode = 7
-    versionName = "1.1.3"
+    versionCode = 8
+    versionName = "1.1.4"
 }    
 
     buildTypes {
