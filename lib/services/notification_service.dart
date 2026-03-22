@@ -10,15 +10,10 @@ class NotificationService {
 
   static Future<void> init() async {
     const AndroidInitializationSettings androidInitializationSettings =
-        AndroidInitializationSettings("@mipmap/ic_launcher");
-    const DarwinInitializationSettings iOSinizializationSettings =
-        DarwinInitializationSettings();
+        AndroidInitializationSettings("@drawable/ic_stat_ic_launcher");
 
     const InitializationSettings initializationSettings =
-        InitializationSettings(
-      android: androidInitializationSettings,
-      iOS: iOSinizializationSettings,
-    );
+        InitializationSettings(android: androidInitializationSettings);
 
     await flutterLocalNotificationsPlugin.initialize(
       initializationSettings,
@@ -36,9 +31,8 @@ class NotificationService {
         "channel_Name",
         importance: Importance.high,
         priority: Priority.high,
-        icon: "@mipmap/ic_stat_ic_launcher",
+        icon: "@drawable/ic_stat_ic_launcher",
       ),
-      iOS: DarwinNotificationDetails(),
     );
     await flutterLocalNotificationsPlugin.show(
       0,
@@ -48,7 +42,6 @@ class NotificationService {
     );
   }
 
-  // Cancel all notifications
   Future<void> cancelNotifications() async {
     await flutterLocalNotificationsPlugin.cancelAll();
   }
