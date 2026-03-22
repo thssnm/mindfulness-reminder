@@ -53,8 +53,8 @@ defaultConfig {
 
     minSdk = flutter.minSdkVersion
     targetSdk = 35  // Android 14
-    versionCode = 9
-    versionName = "1.1.5"
+    versionCode = 10
+    versionName = "1.1.6"
 }    
 
     buildTypes {
@@ -62,18 +62,15 @@ defaultConfig {
         if (useKeystoreSigning) {
             signingConfig = signingConfigs.getByName("release")
         }
-        isMinifyEnabled = true     
-        isShrinkResources = true
-        proguardFiles(
-            getDefaultProguardFile("proguard-android-optimize.txt"),
-            "proguard-rules.pro"
-        )
+        isMinifyEnabled = false
+        isShrinkResources = false
         ndk {
             debugSymbolLevel = "FULL"  
         }
     }
 }
 }
+
 
 dependencies {
     // For AGP 7.4+
